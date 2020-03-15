@@ -1,7 +1,7 @@
 
 <nav>
   <h1>Bryce Byker</h1>
-  <div *ngIf="!mobile">
+  <div *ngIf="!(mobile | async).matches">
     <ul>
       <a routerLink="/home" routerLinkActive="active">Home</a>
       <a routerLink="/about" routerLinkActive="active">About</a>
@@ -9,7 +9,7 @@
       <a routerLink="/contact" routerLinkActive="active">Contact</a>
     </ul>  
   </div>
-  <div *ngIf="mobile" class='menu-container'>
+  <div *ngIf="(mobile | async).matches" class='menu-container'>
     <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
   </div>
 </nav>
@@ -28,9 +28,6 @@
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
-
-
-
 
 
 <footer>

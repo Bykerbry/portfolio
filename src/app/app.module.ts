@@ -10,6 +10,7 @@ import { ContactComponent } from './contact/contact.component';
 import { MatIconModule, } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     MatIconModule,
     MatSidenavModule,
     BrowserAnimationsModule,
+    LayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
