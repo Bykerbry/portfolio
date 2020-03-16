@@ -30,7 +30,30 @@ img {
     color: #EEE;
     margin-top: 1rem;
     text-align: center;
+    text-shadow: 20px -12px 10px black;
     white-space: nowrap;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+app-project {
+    display: flex;
+    min-width: 300px;
+    flex: 1;
+    margin: 2rem;
+    border-radius: 1rem;
+    background: #ffffff80
+}
+
+app-project:hover {
+    box-shadow: 0px 0px 10px #AAA;
+}
+
+.projects {
+    text-align: center;
 }
 
 @media screen and (min-width: 601px) {

@@ -1,0 +1,46 @@
+.project-container {
+    padding: 2rem;
+}
+.project-container:hover mat-icon {
+    color: #000080;
+}
+
+h3 {
+    text-align: center;
+}
+p {
+    text-align: center;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-container a {
+    width: 70px;
+}
+
+.icon-container {
+    text-align: center;
+}
+
+a {
+    color: #000080;
+    border-radius: .25em;
+    text-decoration: none;
+    border: 1px solid #000080;
+    padding: .5em;
+    text-align: center;
+}
+ 
+a:hover {
+    color: #EEE;
+    background-color: #000080;
+}
+
+mat-icon {
+    font-size: 48px;
+    height: 48px;
+    width: 48px;
+}

@@ -10,6 +10,7 @@ h1 {
     color: #EEEEEE;
     margin: 0;
     padding: 1em;
+    align-self: center;
 }
 
 ul {
