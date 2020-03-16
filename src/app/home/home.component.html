@@ -1,1 +1,13 @@
-<p>home works!</p>
+<div class="img-container">
+    <div class="img-overlay">
+        <h2 class="front-end">Front-End</h2>
+        <h1 class="web-dev">Web Developer</h1>
+
+    </div>
+    <img src="assets/img/code-screen-4.jpg" alt="">
+</div>
+
+<h1>Projects</h1>
+<div class="projects-container">
+    <app-project *ngFor="let project of projects" [project]="project"></app-project>
+</div>

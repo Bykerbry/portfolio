@@ -1,0 +1,43 @@
+img {
+    width: 100%;
+    overflow: hidden;
+}
+
+.img-container {
+    position: relative;
+    width: 100vw;
+    max-height: 80vh;
+    overflow: hidden;
+}
+
+.img-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.front-end {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #EEE;
+    font-size: 1em;
+}
+
+.web-dev {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    color: #EEE;
+    margin-top: 1rem;
+    text-align: center;
+    white-space: nowrap;
+}
+
+@media screen and (min-width: 601px) {
+    .front-end {
+        font-size: 1.5rem;
+    }
+    .web-dev {
+        font-size: 4rem;
+    }
+}
