@@ -72,5 +72,68 @@ mat-sidenav-content {
     flex-direction: column;
 }
 .side-bar-list a {
-    color: blue;
+    color: #000080;
+}
+
+.sidenav {
+    background: #EEEEEE;
+}
+h2 {
+    text-align: center;
+    padding-right: 3rem;
+    padding-left: 3rem;
+}
+ul {
+    padding-left: 0;
+    height: 55px;
+}
+footer {
+    background-color: #222;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.LI-profile-badge {
+    margin: 1rem;
+}
+
+.github-logo {
+    max-height: 64px;
+    margin: 1rem;
+    cursor: pointer;
+}
+.github-logo:hover {
+    opacity: .5;
+}
+.social-links-container {
+    color: #EEE
+}
+.social-links {
+    color: #EEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.plus {
+    width: 100vw;
+    text-align: center;
+}
+
+.design {
+    color: #EEE;
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+}
+
+@media screen and (min-width: 433px) {
+    .plus {
+        width: auto;
+    }
 }
