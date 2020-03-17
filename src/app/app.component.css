@@ -77,7 +77,8 @@ mat-sidenav-content {
 }
 
 .sidenav {
-    background: #EEEEEE;
+    background: rgb(248, 248, 248);
+    box-shadow: -12px 0px 16px #00000042;
 }
 
 h2 {

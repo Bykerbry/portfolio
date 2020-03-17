@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+}
+
+.about-me {
+    width: 100%;
+}
+.about-me h2 {
+    text-align: center;
+}
+.about-me p {
+    margin-left: 1rem;
+}

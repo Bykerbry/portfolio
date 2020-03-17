@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { LayoutModule } from '@angular/cdk/layout';
 import { ProjectComponent } from './home/project/project.component';
 import { FooterComponent } from './footer/footer.component';
+import { MyCardComponent } from './about/my-card/my-card.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FooterComponent } from './footer/footer.component';
     ResumeComponent,
     ContactComponent,
     ProjectComponent,
-    FooterComponent
+    FooterComponent,
+    MyCardComponent
   ],
   imports: [
     BrowserModule,
