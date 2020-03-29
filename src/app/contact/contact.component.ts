@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -8,25 +8,56 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  // contactForm: FormGroup
+  contactForm: FormGroup
 
-  constructor() { }
+  constructor(private fb: FormBuilder) { }
 
+  validationMsgs = {
+    'firstName': {
+      'required': 'First Name is required'
+    },
+    'email': {
+      'required': 'E-mail is required',
+      'email': 'Must be a valid email address'
+    },
+    'message': {
+      'required': 'Please include the message you wish to send'
+    }
+  }
+
+  formErrors = {
+    'firstName': '',
+    'email': '',
+    'message': ''
+  }
 
 
   ngOnInit(): void {
-    // this.contactForm = new FormGroup({
-    //   firstName: new FormControl(),
-    //   lastName: new FormControl(),
-    //   company: new FormControl(),
-    //   email: new FormControl()
-    // })
+    this.contactForm = this.fb.group({
+      firstName: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      message: ['', Validators.required]
+    })
+  }
+
+  onSubmit() {
+    console.log(this.contactForm.value);
+  }
+
+  formValidation(group: FormGroup) {
+    Object.keys(group.controls).forEach(key => {
+      const abstractControl = group.get(key)
+      this.formErrors[key] = ''
+      if (!abstractControl.valid) {
+        const errorType = Object.keys(abstractControl.errors)[0]
+        this.formErrors[key] = this.validationMsgs[key][errorType]
+      }
+    });
   }
 
   /* 
   To Do:
  
-    3. Set Validation
     4. Create Node backend for email
     5. Test 
     6. Deploy

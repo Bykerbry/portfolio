@@ -1,17 +1,17 @@
 <h1>Contact</h1>
 
 <div class="form-container">
-    <!-- <form> -->
-    <div class="inner-container">
+    <form class="inner-container" [formGroup]="contactForm" (ngSubmit)='onSubmit(); formValidation(contactForm)'>
 
         <div class="form-el">
             <mat-form-field>
-                <input matInput placeholder='First Name' name="firstName" id="firstName" type="text">
+                <input matInput formControlName="firstName" placeholder='First Name *' name="firstName" id="firstName" type="text">
+                <mat-error *ngIf="formErrors['firstName']">{{ formErrors['firstName'] }}</mat-error>
             </mat-form-field>
         </div>
         <div class="form-el">
             <mat-form-field>
-                <input matInput placeholder="Last Name" name="lastName" id="lastName" type="text">            
+                <input matInput placeholder="Last Name" name="lastName" id="lastName" type="text">  
             </mat-form-field>
         </div>
         <div class="form-el">
@@ -21,17 +21,18 @@
         </div>
         <div class="form-el">
             <mat-form-field>
-                <input matInput placeholder="E-mail" name="email" id="email" type="text">
+                <input matInput formControlName="email" placeholder="E-mail *" name="email" id="email" type="text">
+                <mat-error *ngIf="formErrors['email']">{{ formErrors['email'] }}</mat-error>
             </mat-form-field>
         </div>
         <div class="form-el">
             <mat-form-field appearance="outline">
-                <mat-label>Message</mat-label>
-                <textarea matInput placeholder="Comment" name="comment" id="comment" cols="30" rows="10"></textarea>
+                <mat-label>Message *</mat-label>
+                <textarea matInput formControlName="message" name="comment" id="comment" cols="30" rows="10"></textarea>
+                <mat-error *ngIf="formErrors['message']">{{ formErrors['message'] }}</mat-error>
             </mat-form-field>
         </div>
         <button>Submit</button>
     
-    </div>
-    <!-- </form> -->
+    </form>
 </div>
