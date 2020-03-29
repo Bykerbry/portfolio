@@ -23,4 +23,13 @@ export class ContactComponent implements OnInit {
     // })
   }
 
+  /* 
+  To Do:
+ 
+    3. Set Validation
+    4. Create Node backend for email
+    5. Test 
+    6. Deploy
+  */
+
 }

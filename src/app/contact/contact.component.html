@@ -2,6 +2,8 @@
 
 <div class="form-container">
     <!-- <form> -->
+    <div class="inner-container">
+
         <div class="form-el">
             <mat-form-field>
                 <input matInput placeholder='First Name' name="firstName" id="firstName" type="text">
@@ -23,10 +25,13 @@
             </mat-form-field>
         </div>
         <div class="form-el">
-            <mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Message</mat-label>
                 <textarea matInput placeholder="Comment" name="comment" id="comment" cols="30" rows="10"></textarea>
             </mat-form-field>
         </div>
         <button>Submit</button>
+    
+    </div>
     <!-- </form> -->
 </div>
