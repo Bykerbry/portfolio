@@ -5,7 +5,7 @@ const path = require('path')
 
 app.use(express.static('dist/portfolio'))
 
-app.get('/', (req, res) => {
+app.get('/*', (req, res) => {
     let options = {
         root: path.join(__dirname, 'dist/portfolio')
     }
