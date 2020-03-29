@@ -58,7 +58,7 @@ mat-icon:hover {
 }
 
 mat-sidenav-content {
-    height: 100%;
+    display: inline;
 }
 
 .menu-container {

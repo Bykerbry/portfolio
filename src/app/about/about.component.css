@@ -4,10 +4,36 @@ h1 {
 
 .about-me {
     width: 100%;
+    margin-top: 2rem;
 }
+
 .about-me h2 {
     text-align: center;
 }
+
 .about-me p {
-    margin-left: 1rem;
+    margin: 2rem;
+    text-indent: 1.5rem;
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    width: 60px;
+}
+
+.icon p {
+    margin-bottom: 0 .5rem;
+}
+
+.icon i {
+    font-size: 3rem;
 }

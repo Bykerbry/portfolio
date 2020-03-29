@@ -1,6 +1,11 @@
 .project-container {
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between
 }
+
 .project-container:hover mat-icon {
     color: #000080;
 }
@@ -8,6 +13,7 @@
 h3 {
     text-align: center;
 }
+
 p {
     text-align: center;
 }
@@ -44,3 +50,9 @@ mat-icon {
     height: 48px;
     width: 48px;
 }
+
+/* @media screen and (min-width: 840px) {
+    .project-container{
+        max-width: 300px;
+    }
+}  */

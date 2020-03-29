@@ -3,7 +3,50 @@
     <app-my-card></app-my-card>
     <div class="about-me">
         <h2>A Little About Me</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi reiciendis ea minima, maiores cupiditate iusto ex officia soluta doloremque in, dolore laborum reprehenderit obcaecati deserunt dicta itaque ullam. Sunt, odio.
-        Perspiciatis harum ratione suscipit dignissimos. Beatae eos sed quam, natus consectetur magnam similique, harum laudantium quis nemo asperiores dolorum error numquam corporis adipisci deserunt. Autem assumenda ipsam impedit sed ducimus.
+        <p> 
+            I am a passionate web developer eager to learn new skills and make a positive impact. With knowledge 
+            in HTML, CSS, and JavaScript as well as the Angular framework, node.js runtime, SQL and Git/GitHub 
+            for version control/collaboration, I have crafted many user friendly web applications both individually 
+            and with teammates. I am always excited to challenge myself and develop new skills and am constantly 
+            learning to be the best developer I can be!
+        </p>
+    </div>
+
+    <div class="icons">
+        <ng-container *ngFor="let icon of icons">
+            <div class="icon">
+                <p>{{ icon.name }}</p>
+                <i [class]="icon.class" [ngStyle]="{color: icon.color}"></i>
+            </div>
+        </ng-container>
+    </div>
+    <div class="about-me">
+        <h2>My Story</h2>
+        <p> 
+            It is an incredible thing when passions and talents align. I navigated my way down a unique professional 
+            path before discovering that alignment for myself in coding. My studies in college were focused on the 
+            pursuance of a career in physical therapy. After 2 years working in a clinic, I had developed strong 
+            interpersonal and critical thinking skills, but was ultimately faced with the decision of getting a 
+            doctorates in physical therapy or changing careers. The craft beer industry was booming and I had 
+            extensive knowledge of the brewing process as a result of my love of home brewing. I got a job at the 
+            largest brewery in Michigan helping in the production of their barrel aged beers. I love learning, so 
+            during some time off, I decided to type three words into the google search bar that would change my life,
+            “How to Code”.
+        </p>
+        <p>
+            For the next several months I was spending nearly all my free time on Codecademy, Freecodecamp, Udemy, 
+            Pleuralsight and anywhere I could learn more HTML, CSS and JavaScript. I was hooked. I love problem solving 
+            so the process of figuring out how to do what I need to do, and making it work, I find so satisfying! Pairing 
+            that with the potential of programming to create positive change in the lives of so many people all over the 
+            world and changing careers was a no brainer. It was the alignment of talent and passion for which I had been 
+            looking.
+        </p>
+        <p>
+            I wanted to create a solid foundation of knowledge for myself in preparation for this career change and decided 
+            going to school would be the best way to learn the skills necessary to be successful in software development. 
+            My time at Grand Circus's Front-End After-Hours Bootcamp has only motivated me further to continue learning new 
+            skills. And although my time at Grand Circus has just come to a close, I’m so excited for the journey that is just 
+            beginning.
+        </p>    
     </div>
 </div>
