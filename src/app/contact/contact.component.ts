@@ -43,7 +43,9 @@ export class ContactComponent implements OnInit {
 
   onSubmit() {
     console.log(this.contactForm.value);
-    return this._http.post('http://localhost:3000/contact', this.contactForm.value)
+    return this._http.post('/send', this.contactForm.value).subscribe( res => {
+      console.log(res, 'from subscription');
+    })
   }
 
   formValidation(group: FormGroup) {
@@ -60,9 +62,10 @@ export class ContactComponent implements OnInit {
   /* 
   To Do:
  
-    4. Create Node backend for email
-    5. Test 
-    6. Deploy
+    1. Get front end talking to back end
+    2. Set up email
+    3. Test 
+    4. Deploy
   */
 
 }
