@@ -63,8 +63,8 @@ export class ContactComponent implements OnInit {
           this.sending = false;
           this.displaySent = true;
           this.username = this.contactForm.value.firstName;
-          formDirective.resetForm()
           this.contactForm.reset();
+          formDirective.resetForm();
       }, 
         error => {
           this.sending = false;

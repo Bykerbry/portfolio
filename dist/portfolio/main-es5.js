@@ -1157,9 +1157,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
               _this.sending = false;
               _this.displaySent = true;
               _this.username = _this.contactForm.value.firstName;
-              formDirective.resetForm();
 
               _this.contactForm.reset();
+
+              formDirective.resetForm();
             }, function (error) {
               _this.sending = false;
               _this.displayError = true;
