@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -10,7 +11,7 @@ export class ContactComponent implements OnInit {
 
   contactForm: FormGroup
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private _http: HttpClient, private fb: FormBuilder) { }
 
   validationMsgs = {
     'firstName': {
@@ -42,6 +43,7 @@ export class ContactComponent implements OnInit {
 
   onSubmit() {
     console.log(this.contactForm.value);
+    return this._http.post('http://localhost:3000/contact', this.contactForm.value)
   }
 
   formValidation(group: FormGroup) {

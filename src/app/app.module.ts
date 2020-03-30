@@ -12,6 +12,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MyCardComponent } from './about/my-card/my-card.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { HttpClientModule } from '@angular/common/http'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { LayoutModule } from '@angular/cdk/layout';
 
@@ -37,6 +38,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     MatIconModule,
     MatSidenavModule,
     MatFormFieldModule,
