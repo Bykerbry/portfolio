@@ -6,10 +6,8 @@ const path = require('path')
 app.use(express.static('dist/portfolio'))
 
 app.get('/*', (req, res) => {
-    let options = {
-        root: path.join(__dirname, 'dist/portfolio')
-    }
-    return res.sendFile('index.html', options)
+ 
+    return res.sendFile(path.join(__dirname,'/dist/portfolio/index.html'))
 })
 
 
