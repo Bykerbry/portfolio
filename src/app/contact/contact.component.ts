@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, FormGroupDirective } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -10,6 +10,10 @@ import { HttpClient } from '@angular/common/http';
 export class ContactComponent implements OnInit {
 
   contactForm: FormGroup
+  sending: boolean;
+  displaySent: boolean;
+  displayError: boolean;
+  username: string
 
   constructor(private _http: HttpClient, private fb: FormBuilder) { }
 
@@ -41,14 +45,7 @@ export class ContactComponent implements OnInit {
     })
   }
 
-  onSubmit() {
-    console.log(this.contactForm.value);
-    return this._http.post('/send', this.contactForm.value).subscribe( res => {
-      console.log(res, 'from subscription');
-    })
-  }
-
-  formValidation(group: FormGroup) {
+  formValidation(group: FormGroup, formDirective: FormGroupDirective) {
     Object.keys(group.controls).forEach(key => {
       const abstractControl = group.get(key)
       this.formErrors[key] = ''
@@ -57,6 +54,28 @@ export class ContactComponent implements OnInit {
         this.formErrors[key] = this.validationMsgs[key][errorType]
       }
     });
+
+    const errors = Object.keys(this.formErrors).filter( key => this.formErrors[key])
+    if (!errors[0]) {
+      this.sending = true;
+      return this._http.post('/send', this.contactForm.value).subscribe( 
+        res => {
+          this.sending = false;
+          this.displaySent = true;
+          this.username = this.contactForm.value.firstName;
+          formDirective.resetForm()
+          this.contactForm.reset();
+      }, 
+        error => {
+          this.sending = false;
+          this.displayError = true;
+          this.username = this.contactForm.value.firstName;
+          this.contactForm.reset();
+          formDirective.resetForm();
+          console.log(error);
+        }
+      )
+    }
   }
 
   /* 

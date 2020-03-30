@@ -31,8 +31,13 @@ p {
     text-align: center;
 }
 
+.project-container:hover a {
+    color: #fcfcfc;
+    background: #000080;
+}
 a {
     color: #000080;
+    background: #fcfcfc;
     border-radius: .25em;
     text-decoration: none;
     border: 1px solid #000080;
@@ -41,8 +46,8 @@ a {
 }
  
 a:hover {
-    color: #EEE;
-    background-color: #000080;
+    color: #000080 !important;
+    background: #fcfcfc !important;
 }
 
 mat-icon {

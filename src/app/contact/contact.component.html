@@ -1,13 +1,20 @@
 <h1>Contact</h1>
 
 <div class="form-container">
-    <form class="inner-container" [formGroup]="contactForm" (ngSubmit)='onSubmit(); formValidation(contactForm)'>
-
+    <form class="inner-container" #formDirective='ngForm' [formGroup]="contactForm" (ngSubmit)='formValidation(contactForm, formDirective)'>
+        <div *ngIf="displaySent" class="status-msg">
+           <h3>Thank You {{ username }}!</h3>
+           <p>Your message has been sent!</p>
+        </div>
+        <div *ngIf="displayError" class="status-msg">
+            <h3>Sorry {{ username }}!</h3>
+            <p>There seems to have been an error processing the request. Please feel free to reach out to me using any of the contact/social information listed in the footer at the bottom of the page. Thank you!</p>
+        </div>
         <div class="form-el">
-            <mat-form-field>
-                <input matInput formControlName="firstName" placeholder='First Name *' name="firstName" id="firstName" type="text">
-                <mat-error *ngIf="formErrors['firstName']">{{ formErrors['firstName'] }}</mat-error>
-            </mat-form-field>
+        <mat-form-field>
+            <input matInput formControlName="firstName" placeholder='First Name *' name="firstName" id="firstName" type="text">
+            <mat-error *ngIf="formErrors['firstName']">{{ formErrors['firstName'] }}</mat-error>
+        </mat-form-field>
         </div>
         <div class="form-el">
             <mat-form-field>
@@ -32,7 +39,7 @@
                 <mat-error *ngIf="formErrors['message']">{{ formErrors['message'] }}</mat-error>
             </mat-form-field>
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit"> {{ sending ? "Sending..." : "Submit" }}</button>
     
     </form>
 </div>

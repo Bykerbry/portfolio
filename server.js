@@ -63,6 +63,8 @@ app.post('/send', (req, res) => {
         }
         console.log('Message sent!', info.messageId);
         console.log('Preview URL: ', nodemailer.getTestMessageUrl(info));
+        res.status(200)
+        res.json(info)
     })
 
 })

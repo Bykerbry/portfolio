@@ -2,6 +2,15 @@ h1 {
     text-align: center;
 }
 
+.status-msg {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.status-msg h3 {
+    margin-top: 0;
+}
+
 .form-container {
     display: flex;
     flex-direction: column;
@@ -18,17 +27,18 @@ button {
     color: #000080;
     font-size: 1rem;
     border-radius: .25em;
-    text-decoration: none;
     border: 1px solid #000080;
     padding: .5em 1em;
     text-align: center;
     margin: 1rem 0;
     cursor: pointer;
+    color: #EEE;
+    background-color: #000080;
 }
  
 button:hover {
-    color: #EEE;
-    background-color: #000080;
+    color: #000080;
+    background: #EEE;
 }
 
 
