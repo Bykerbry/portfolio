@@ -137,6 +137,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           name: "Node.js",
           "class": "fab fa-node",
           color: "#25bc61"
+        }, {
+          name: "Git",
+          "class": "fab fa-git-alt",
+          color: "#f05032"
         }];
       }
 
