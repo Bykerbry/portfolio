@@ -25,8 +25,8 @@
                 <mat-label>First Name *</mat-label>
                 <input 
                     matInput 
-                    formControlName="firstName" 
                     #first='matInput' 
+                    formControlName="firstName" 
                     name="firstName" 
                     id="firstName" 
                     type="text">
@@ -44,16 +44,36 @@
         <div class="form-el">
             <mat-form-field appearance="outline">
                 <mat-label>Last Name</mat-label>
-                <input matInput name="lastName" id="lastName" type="text">  
-                <mat-icon matSuffix>person</mat-icon>
+                <input 
+                    matInput 
+                    #last='matInput' 
+                    formControlName="lastName" 
+                    name="lastName" 
+                    id="lastName" 
+                    type="text">  
+                <mat-icon 
+                    matSuffix 
+                    [color]="last.focused ? 'primary' : ''">
+                    person
+                </mat-icon>
             </mat-form-field>
         </div>
 
         <div class="form-el">
             <mat-form-field appearance="outline">
                 <mat-label>Company</mat-label>
-                <input matInput name="company" id="company" type="text">
-                <mat-icon matSuffix>work_outline</mat-icon>
+                <input 
+                    matInput 
+                    #company='matInput' 
+                    formControlName="company" 
+                    name="company" 
+                    id="company" 
+                    type="text">
+                <mat-icon 
+                    matSuffix 
+                    [color]="company.focused ? 'primary' : ''">
+                    work_outline
+                </mat-icon>
             </mat-form-field>
         </div>
 
@@ -93,7 +113,6 @@
                     {{ formErrors['message'] }}
                 </mat-error>
             </mat-form-field>
-            
         </div>
 
         <button type="submit"> {{ sending ? "Sending..." : "Submit" }}</button>

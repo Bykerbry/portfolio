@@ -17,10 +17,10 @@
   <mat-sidenav #sidenav mode="over" [(opened)]="opened" position='end' class="sidenav">
     <h2>Menu</h2>
     <ul class="side-bar-list">
-      <a routerLink="/home" routerLinkActive="active">Home</a>
-      <a routerLink="/about" routerLinkActive="active">About</a>
-      <a routerLink="/resume" routerLinkActive="active">Resume</a>
-      <a routerLink="/contact" routerLinkActive="active">Contact</a>
+      <a routerLink="/home" routerLinkActive="active" (click)="sidenav.close()">Home</a>
+      <a routerLink="/about" routerLinkActive="active" (click)="sidenav.close()">About</a>
+      <a routerLink="/resume" routerLinkActive="active" (click)="sidenav.close()">Resume</a>
+      <a routerLink="/contact" routerLinkActive="active" (click)="sidenav.close()">Contact</a>
     </ul>
   </mat-sidenav>
   <mat-sidenav-content>

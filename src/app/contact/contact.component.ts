@@ -41,13 +41,14 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
     this.contactForm = this.fb.group({
       firstName: ['', Validators.required],
+      lastName: [''],
+      company: [''],
       email: ['', [Validators.required, Validators.email]],
       message: ['', Validators.required]
     })
   }
 
   formValidation(group: FormGroup, formDirective: FormGroupDirective) {
-    console.log(group.controls);
     Object.keys(group.controls).forEach(key => {
       const abstractControl = group.get(key)
       this.formErrors[key] = ''
@@ -89,14 +90,4 @@ export class ContactComponent implements OnInit {
     } 
     return '#AAA'
   }
-
-  /* 
-  To Do:
- 
-    1. Get front end talking to back end
-    2. Set up email
-    3. Test 
-    4. Deploy
-  */
-
 }
