@@ -38,6 +38,11 @@ export class AboutComponent implements OnInit {
       class: "fab fa-node",
       color: "#25bc61",
     },
+    {
+      name: "Git",
+      class: "fab fa-git-alt",
+      color: "#f05032"
+    }
   ]
 
 }
