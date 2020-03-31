@@ -36,4 +36,10 @@ h1 {
 
 .icon i {
     font-size: 3rem;
+    transition-property: all;
+    transition-duration: .5s;
+}
+
+.icon:hover i {
+    transform: rotateY(360deg);
 }

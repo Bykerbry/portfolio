@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, FormGroupDirective } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, FormGroupDirective, AbstractControl } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { MatInput } from '@angular/material/input';
 
 @Component({
   selector: 'app-contact',
@@ -46,6 +47,7 @@ export class ContactComponent implements OnInit {
   }
 
   formValidation(group: FormGroup, formDirective: FormGroupDirective) {
+    console.log(group.controls);
     Object.keys(group.controls).forEach(key => {
       const abstractControl = group.get(key)
       this.formErrors[key] = ''
@@ -76,6 +78,16 @@ export class ContactComponent implements OnInit {
         }
       )
     }
+  }
+
+  getColor(formControl: AbstractControl, first: MatInput) {
+    if (formControl.invalid && formControl.touched) {
+      return 'warn'
+    }
+    if (first.focused) {
+      return 'primary'
+    } 
+    return '#AAA'
   }
 
   /* 

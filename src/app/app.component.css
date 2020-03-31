@@ -10,6 +10,7 @@ h1 {
     margin: 0;
     padding: 1em;
     align-self: center;
+    cursor: pointer;
 }
 
 ul {
@@ -51,6 +52,7 @@ a:hover:before {
 
 mat-icon {
     color: #EEE;
+    cursor: pointer;
 }
 
 mat-icon:hover {

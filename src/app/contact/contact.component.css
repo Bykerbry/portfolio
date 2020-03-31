@@ -34,12 +34,24 @@ button {
     cursor: pointer;
     color: #EEE;
     background-color: #000080;
+    transition-property: all;
+    transition-duration: .15s;
+    transition-timing-function: ease-out;
 }
  
 button:hover {
     color: #000080;
     background: #EEE;
 }
+
+mat-icon {
+    color: #AAA;
+}
+
+.input:focus mat-icon {
+    color: #000080;
+}
+
 
 
 @media screen and (min-width: 480px) {
@@ -53,14 +65,15 @@ button:hover {
         padding: 2rem;
         margin-bottom: 2rem;
     }
+  
     .form-el {
-        max-width: 67%;
+        width: 80%;
     }
     
 }
 
 @media screen and (min-width: 601px) {
     .inner-container {
-        width: 50vw
+        width: 65vw
     }
 }
