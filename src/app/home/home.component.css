@@ -15,6 +15,7 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-weight: 100;
 }
 
 .front-end {
@@ -22,6 +23,7 @@ img {
     font-family: 'Montserrat', sans-serif;
     color: #EEE;
     font-size: 1em;
+
 }
 
 .web-dev {
@@ -32,6 +34,8 @@ img {
     text-align: center;
     text-shadow: 20px -12px 10px black;
     white-space: nowrap;
+    font-weight: 100 !important;
+
 }
 
 .projects-container {

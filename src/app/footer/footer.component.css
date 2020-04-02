@@ -79,6 +79,11 @@ footer {
 .github-logo:hover {
     opacity: .5;
 }
+
+.gitHub-link {
+    margin: 0;
+}
+
 .social-links-container {
     color: #EEE
 }
